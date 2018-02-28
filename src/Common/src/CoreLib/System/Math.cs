@@ -510,6 +510,12 @@ namespace System
 
             return val2;
         }
+        
+        [NonVersionable]
+        public static DateTime Max(DateTime val1, DateTime val2)
+		{
+			return val1.Ticks >= val2.Ticks ? val1 : val2;
+		}
 
         [CLSCompliant(false)]
         [NonVersionable]
@@ -598,6 +604,12 @@ namespace System
 
             return val2;
         }
+        
+        [NonVersionable]
+        public static DateTime Min(DateTime val1, DateTime val2)
+		{
+			return val1.Ticks <= val2.Ticks ? val1 : val2;
+		}
 
         [CLSCompliant(false)]
         [NonVersionable]
